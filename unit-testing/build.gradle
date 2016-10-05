@@ -1,0 +1,54 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "prog.Main"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+	
+	// https://mvnrepository.com/artifact/com.sun.jersey/jersey-client
+	compile group: 'com.sun.jersey', name: 'jersey-client', version: '1.19.1'
+	
+	// this is for unit testing
+	// declaring it with 'testCompile' makes sure that this is not included in the jar file
+	// we dont really want unit test dependencies to be part of the main build right? :D
+	// https://mvnrepository.com/artifact/junit/junit
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+//this is for configuring the tests by gradle (this block is optional)
+//http://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
+test {
+	testLogging {
+        // set options for log level LIFECYCLE
+        events "passed", "skipped", "failed", "standardOut"
+        showExceptions true
+        exceptionFormat "full"
+        showCauses true
+        showStackTraces true
+
+        // set options for log level DEBUG and INFO
+        debug {
+            events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+            exceptionFormat "full"
+        }
+        info.events = debug.events
+        info.exceptionFormat = debug.exceptionFormat
+
+        afterSuite { desc, result ->
+            if (!desc.parent) { // will match the outermost suite
+                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+                def startItem = '|  ', endItem = '  |'
+                def repeatLength = startItem.length() + output.length() + endItem.length()
+                println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
+            }
+        }
+    }
+}
