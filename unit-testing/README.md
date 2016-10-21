@@ -19,7 +19,7 @@ gradle cleanTest test
 
 If you want to run only a partucular test:
 ```
-gradle test --tests '*TestLibs.testGetResponse'
+gradle test --tests '*TestLibs.testAdd'
 ```
 
 ##Misc

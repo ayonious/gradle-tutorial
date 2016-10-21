@@ -10,12 +10,31 @@ repositories {
 }
 
 dependencies {
-	// this is for unit testing
+    // this is for unit testing
 	// declaring it with 'testCompile' makes sure that this is not included in the jar file
 	// we dont really want unit test dependencies to be part of the main build right? :D
 	// https://mvnrepository.com/artifact/junit/junit
 	testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+
+//for
+//gradle -DDEBUG=true test
+tasks.withType(Test) {
+    if (System.getProperty('DEBUG', 'false') == 'true') {
+        jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9099'
+    }
+}
+
+//for
+//gradle -DDEBUG=true run
+tasks.withType(JavaExec) {
+    if (System.getProperty('DEBUG', 'false') == 'true') {
+        jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9099'
+    }
+}
+
+
 
 //this is for configuring the tests by gradle (this block is optional)
 //http://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
