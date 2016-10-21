@@ -37,9 +37,11 @@ Now set breakpoints using eclipse.
 
 Now from eclipse right click on your project>debug as>debug configuration>Remote java application
 set these fields:
-1. project
-2. host (here its localhost)
-3. port (in this example it will be 9099)
+
+	1. project
+	2. host (here its localhost)
+	3. port (in this example it will be 9099)
+
 Click "debug"
 
 
