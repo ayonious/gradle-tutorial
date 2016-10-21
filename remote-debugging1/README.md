@@ -32,8 +32,8 @@ Listening for transport debug_socket at address: 9099
 ###Step2:
 
 Now set breakpoints using eclipse.
-![Image of brekpoint]
-(https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_breakpoint.png)
+<img src="https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_breakpoint.png" width="448">
+
 
 ###Step3:
 
@@ -46,7 +46,6 @@ set these fields:
 
 Click "debug"
 
-![Image of remote_debug_config]
-(https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_remote_debug_config.png)
+<img src="https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_remote_debug_config.png" width="700">
 
 Enjoy debugging....
