@@ -32,7 +32,7 @@ Listening for transport debug_socket at address: 9099
 
 Now set breakpoints using eclipse. In this case you have to set the break points in your unit test functions.
 ![Image of brekpoint]
-(https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_breakpoint2.png)
+(https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging2/screenshot_breakpoint_test.png)
 
 ###Step3:
 
