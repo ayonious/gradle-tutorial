@@ -47,6 +47,6 @@ set these fields:
 Click "debug"
 
 ![Image of remote_debug_config]
-(https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_remote_debug.png)
+(https://github.com/ayonious/gradle-tutorial/blob/master/remote-debugging1/screenshot_remote_debug_config.png)
 
 Enjoy debugging....
