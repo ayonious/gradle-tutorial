@@ -21,7 +21,7 @@ https://www.eclipse.org/jetty/documentation/9.3.x/enable-remote-debugging.html
 ###Step1:
 
 ```
-gradle -DDEBUG=true run
+gradle -DDEBUG=true test
 ```
 Now in console you will see something like this:
 ```
