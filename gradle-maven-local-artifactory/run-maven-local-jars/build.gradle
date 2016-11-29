@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+  compile 'org.kamal:create-executable:1.1.1-SNAPSHOT'
+}
+
