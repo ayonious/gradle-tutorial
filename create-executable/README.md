@@ -25,7 +25,7 @@ Try this from the __project folder__:
 ```
 sudo ln -sf $PWD/build/install/<proj_name>/bin/<proj_name> /usr/local/bin/<name_of_the_command_you_want>
 ```
-
+NOTE: what the above command does is creates a symilnk inside the /usr/bin/local folder, So if you delete the main instance this will not work anymore.
 
 Example:
 ```
