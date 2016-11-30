@@ -18,7 +18,9 @@ List of tutorial projects:
 4. gradle-maven-local=artifactory
 5. jar-creation
 6. remote-debugging1
-7. remote-debugging1
+7. remote-debugging2
+x. gradle-misc(misc gradle 1 liner commands)
 ```
 
 Each of these folders are separate tutorials And instruction of these tutorials will be found inside the folder.
+
