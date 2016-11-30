@@ -7,3 +7,18 @@ Each single project has a `README.md` file that contains description of the proj
 
 
 Happy gradle learning!!!!!!!!!!!!!!!!!!!!
+
+
+
+List of tutorial projects:
+```
+1. unit-testing
+2. gradle-wrapper
+3. create-executable
+4. gradle-maven-local=artifactory
+5. jar-creation
+6. remote-debugging1
+7. remote-debugging1
+```
+
+Each of these folders are separate tutorials And instruction of these tutorials will be found inside the folder.
